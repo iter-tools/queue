@@ -39,9 +39,9 @@ declare class Queue<T> {
   push(value: T);
 
   /**
-   * Calls `cb(value)` for each value in the queue.
+   * Calls `cb(value, index, queue)` for each value in the queue.
    */
-  forEach(cb: (T) => any);
+  forEach(cb: (value: T, index: number, queue: Queue) => any);
 
   /**
    * Yields sequential 0-based indexes, one for each queued value.
