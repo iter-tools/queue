@@ -28,3 +28,5 @@ declare class Queue<T> {
 
   [Symbol.iterator](): IterableIterator<T>;
 }
+
+export = Queue;
