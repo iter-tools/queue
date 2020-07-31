@@ -1,5 +1,8 @@
 # @iter-tools/queue
 
+[![Build Status](https://travis-ci.org/iter-tools/queue.svg?branch=trunk)](https://travis-ci.org/iter-tools/queue)
+[![codecov](https://codecov.io/gh/iter-tools/queue/branch/trunk/graph/badge.svg)](https://codecov.io/gh/iter-tools/queue)
+
 A simple linked FIFO queue in the style of es6 data structures.
 
 ## Usage
