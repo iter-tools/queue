@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/iter-tools/queue.svg?branch=trunk)](https://travis-ci.org/iter-tools/queue)
 [![codecov](https://codecov.io/gh/iter-tools/queue/branch/trunk/graph/badge.svg)](https://codecov.io/gh/iter-tools/queue)
 
-A simple linked FIFO queue in the style of es6 data structures.
+A simple es6 linked FIFO queue in the pattern of es6 `Map` and `Set`. Includes typescript libdefs. Suitable for node or browser environments.
 
 ## Usage
 
@@ -37,6 +37,17 @@ class Queue<T> {
    */
   constructor(values?: Iterable<T>);
 
+  /**
+   * Returns true if `inst` is a Queue.
+   * This does not necessarily imply instanceof, but the check
+   * is safe across frame boundaries, as it is done by looking for
+   * Queue[Symbol.for('@iter-tools/queue')]
+   */
+  static isQueue(inst);
+
+  /**
+   * The number of values in the queue
+   */
   size: number;
 
   /**
@@ -55,9 +66,11 @@ class Queue<T> {
   push(value: T);
 
   /**
-   * Calls `cb(value)` for each value in the queue
+   * Calls `cb(value)` for each value in the queue.
+   * If `thisArg` is specified and not null it will be used
+   * as the `this` value for each callback.
    */
-  forEach(cb: (T) => any);
+  forEach(cb: (T) => any, thisArg: any);
 
   [Symbol.iterator](): IterableIterator<T>;
 }
