@@ -5,7 +5,7 @@
   "main": "lib/queue.js",
   "types": "lib/queue.d.ts",
   "files": [
-    "lib/queue.js"
+    "lib/*"
   ],
   "sideEffects": false,
   "scripts": {
