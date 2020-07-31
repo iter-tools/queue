@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An es6-style iterable queue",
   "main": "lib/queue.js",
+  "types": "lib/queue.d.ts",
   "files": [
     "lib/queue.js"
   ],
