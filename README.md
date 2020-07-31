@@ -1,6 +1,6 @@
 # @iter-tools/queue
 
-A simple linked queue in the style of es6 data structures.
+A simple linked FIFO queue in the style of es6 data structures.
 
 ## Usage
 
@@ -23,11 +23,14 @@ q.shift(); // undefined
 
 ```ts
 /**
- * FIFO Queue. The values which has been in the queue longest is its head. The most recent addition is the tail.
+ * The values which has been in the queue longest is its head.
+ * The most recent addition is the tail.
  */
 class Queue<T> {
   /**
-   * An optional iterable of `values` to be pushed into the queue in sequence. If `null` or `undefined` are passed the queue will have no initial values.
+   * An optional iterable of `values` to be pushed
+   * into the queue in sequence. If `null` or `undefined` are
+   * passed the queue will have no initial values.
    */
   constructor(values?: Iterable<T>);
 
