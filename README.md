@@ -8,7 +8,8 @@ A simple es6 linked FIFO queue in the pattern of es6 `Map` and `Set`. Includes t
 ## Usage
 
 ```js
-const Queue = require('@iter-tools/queue');
+const Queue = require('@iter-tools/queue'); // OR
+import Queue from '@iter-tools/queue';
 
 const q = new Queue([1, 2, 3]);
 q.push(4);
