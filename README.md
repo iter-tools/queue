@@ -52,6 +52,11 @@ class Queue<T> {
   size: number;
 
   /**
+   * Empties the queue of all values.
+   */
+  clear();
+
+  /**
    * Returns the value at the head of the queue.
    */
   peek(): T | undefined;
