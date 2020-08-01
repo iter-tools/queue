@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/iter-tools/queue.svg?branch=trunk)](https://travis-ci.org/iter-tools/queue)
 [![codecov](https://codecov.io/gh/iter-tools/queue/branch/trunk/graph/badge.svg)](https://codecov.io/gh/iter-tools/queue)
 
-A simple es6 linked FIFO queue in the pattern of es6 `Map` and `Set`. Includes typescript libdefs. Suitable for node or browser environments.
+A simple es6 linked FIFO queue in the pattern of es6 `Map` and `Set`. Includes typescript libdefs. Suitable for node or browser environments. Supports native es imports in `node > 13.2`.
 
 ## Usage
 
