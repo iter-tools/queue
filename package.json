@@ -2,15 +2,20 @@
   "name": "@iter-tools/queue",
   "version": "1.4.0",
   "description": "An es6-style iterable queue",
-  "main": "lib/queue.js",
+  "main": "lib/queue.cjs",
+  "module": "lib/queue.mjs",
   "types": "lib/queue.d.ts",
+  "exports": {
+    "import": "./lib/queue.mjs",
+    "require": "./lib/queue.cjs"
+  },
   "files": [
     "lib/*"
   ],
   "sideEffects": false,
   "scripts": {
     "test": "jest",
-    "verify": "jest --coverage && codecov",
+    "verify": "npm run lint && jest --coverage && codecov",
     "format": "prettier --write '**/*.{js,md}'",
     "lint": "eslint ."
   },
@@ -20,10 +25,10 @@
     }
   },
   "lint-staged": {
-    "*.{mjs,js}": [
+    "*.js": [
       "eslint"
     ],
-    "*.{md,json}": [
+    "*.md": [
       "prettier -c"
     ]
   },
