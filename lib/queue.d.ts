@@ -1,3 +1,5 @@
+/// <reference lib="es6" />
+
 /**
  * The values which has been in the queue longest is its head.
  * The most recent addition is the tail.
@@ -9,7 +11,7 @@ declare class Queue<T> {
    * is safe across frame boundaries, as it is done by looking for
    * inst[Symbol.for('@iter-tools/queue')]
    */
-  static isQueue(inst): boolean;
+  static isQueue(inst: any): boolean;
 
   constructor(values?: Iterable<T> | null);
 
@@ -23,7 +25,7 @@ declare class Queue<T> {
 
   push(value: T): void;
 
-  forEach(cb: (value: T, index: number, queue: Queue) => any): void;
+  forEach(cb: (value: T, index: number, queue: Queue<T>) => any): void;
 
   keys(): IterableIterator<number>;
 
@@ -34,4 +36,4 @@ declare class Queue<T> {
   [Symbol.iterator](): IterableIterator<T>;
 }
 
-export = Queue;
+export default Queue;
