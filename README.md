@@ -23,6 +23,8 @@ q.size; // 0
 q.shift(); // undefined
 ```
 
+Until Typescript supports [package exports](https://github.com/microsoft/TypeScript/issues/33079) you must enable `esModuleInterop` to use this module.
+
 ## API
 
 ```ts
