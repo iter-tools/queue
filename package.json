@@ -1,6 +1,6 @@
 {
   "name": "@iter-tools/queue",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "An es6-style iterable queue",
   "main": "lib/queue.cjs",
   "module": "lib/queue.mjs",
